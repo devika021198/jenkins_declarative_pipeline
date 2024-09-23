@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git checkout') {
+            steps {
+                echo 'welcome to jenkins declarative'
+                git branch: 'main', credentialsId: 'github', url: ' https://github.com/devika021198/jenkins_declarative_pipeline.git'
+            }
+        }
+    }
+}
